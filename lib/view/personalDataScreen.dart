@@ -49,16 +49,22 @@ class PersonalDataScreen extends StatelessWidget {
                     backgroundImage: AssetImage("assets/images/person.png"),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(2),
-                  width: 15,
-                  height: 15,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
+                Positioned(
+                  bottom: 2,
+                  right: 0,
+                  child: Container(
+                    padding: EdgeInsets.all(2),
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                    ),
+                    child: Icon(
+                      Icons.camera_alt,
+                      size: 20,
+                    ),
                   ),
-                  child: Icon(Icons.camera),
-                  alignment: Alignment.bottomRight,
                 ),
               ],
             ),
