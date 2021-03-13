@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
   }
 }
 
-class CustomTextFiled extends StatelessWidget {
+class CustomTextFiled extends StatefulWidget {
   const CustomTextFiled({
     Key key,
     @required this.screenSize,
@@ -53,9 +53,16 @@ class CustomTextFiled extends StatelessWidget {
   final Size screenSize;
 
   @override
+  _CustomTextFiledState createState() => _CustomTextFiledState();
+}
+
+class _CustomTextFiledState extends State<CustomTextFiled> {
+  bool _obscureText = false;
+
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: screenSize.width * 0.85,
+      width: widget.screenSize.width * 0.85,
       height: 48,
       child: TextField(
         keyboardType: TextInputType.emailAddress,
@@ -67,10 +74,10 @@ class CustomTextFiled extends StatelessWidget {
                   size: 18,
                 ),
                 onTap: () {
-                  print("isClicked");
+                  _toggle();
                 },
               ),
-              visible: isForPasword,
+              visible: widget.isForPasword,
             ),
             border: new OutlineInputBorder(
               borderSide: BorderSide(width: 0, style: BorderStyle.none),
@@ -78,14 +85,21 @@ class CustomTextFiled extends StatelessWidget {
                 const Radius.circular(8.0),
               ),
             ),
-            hintText: "$hintText",
+            hintText: "${widget.hintText}",
             filled: true,
             hintStyle: new TextStyle(
                 fontSize: 14,
                 color: kGrey.withOpacity(0.7),
                 fontWeight: FontWeight.bold),
             fillColor: kGrey.withOpacity(0.12)),
+        obscureText: _obscureText,
       ),
     );
+  }
+
+  void _toggle() {
+    setState(() {
+      _obscureText = !_obscureText;
+    });
   }
 }
