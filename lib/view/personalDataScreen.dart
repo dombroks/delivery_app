@@ -8,9 +8,14 @@ class PersonalDataScreen extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: GestureDetector(
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onTap: () {
+            print("back arrow click");
+          },
         ),
         backgroundColor: Colors.white,
         elevation: 0,
@@ -36,9 +41,6 @@ class PersonalDataScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: screenSize.height * 0.1,
-              ),
               Center(
                 child: GestureDetector(
                   child: Stack(
