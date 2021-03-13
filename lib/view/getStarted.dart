@@ -2,6 +2,8 @@ import 'package:delivery/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'component/CustomButton.dart';
+
 class GetStartedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -34,22 +36,8 @@ class GetStartedScreen extends StatelessWidget {
             SizedBox(
               height: screenSize.height * 0.3,
             ),
-            SizedBox(
-              width: 300,
-              height: 45,
-              child: RaisedButton(
-                onPressed: () {},
-                color: kPrimaryColor,
-                child: Text(
-                  "Get Started",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold),
-                ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(3)),
-              ),
+            CustomButton(
+              text: "Get Started",
             ),
             SizedBox(
               height: 10,
@@ -60,3 +48,4 @@ class GetStartedScreen extends StatelessWidget {
     );
   }
 }
+

@@ -1,4 +1,5 @@
 import 'package:delivery/constants.dart';
+import 'package:delivery/view/component/CustomButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,8 +16,12 @@ class LoginScreen extends StatelessWidget {
           height: screenSize.height,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SvgPicture.asset("assets/images/biker.svg"),
+              SizedBox(
+                height: screenSize.height * 0.1,
+              ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -25,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                     hintText: "Email",
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 18,
                   ),
                   CustomTextFiled(
                     screenSize: screenSize,
@@ -33,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                     isForPasword: true,
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 15,
                   ),
                   SizedBox(
                     width: screenSize.width * 0.84,
@@ -49,15 +54,46 @@ class LoginScreen extends StatelessWidget {
                             ),
                           ),
                           onTap: () {
-                            print("I have been clicked");
+                            print("Forgot password");
                           },
-                        ),
-                        SizedBox(
-                          height: 5,
                         ),
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CustomButton(
+                    text: "Login",
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                          color: kGrey.withOpacity(0.9),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      GestureDetector(
+                        child: Text(
+                          " Register now",
+                          style: TextStyle(
+                            color: kPrimaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        onTap: () {
+                          print("Register now");
+                        },
+                      )
+                    ],
+                  )
                 ],
               )
             ],
