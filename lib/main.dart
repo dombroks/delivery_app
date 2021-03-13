@@ -1,4 +1,5 @@
 import 'package:delivery/view/confirmEmailScreen.dart';
+import 'package:delivery/view/navigationScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Delivery app',
-      home: PersonalDataScreen(),
+      home: NavigationScreen(),
     );
   }
 }
