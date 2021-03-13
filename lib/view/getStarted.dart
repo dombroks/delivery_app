@@ -18,7 +18,7 @@ class GetStartedScreen extends StatelessWidget {
                 Text("Express Delivery",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 26,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
                     )),
                 SizedBox(
@@ -26,7 +26,8 @@ class GetStartedScreen extends StatelessWidget {
                 ),
                 Text(
                   "Join our delivery team",
-                  style: TextStyle(color: Colors.grey),
+                  style: TextStyle(
+                      color: Colors.grey, fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -41,10 +42,13 @@ class GetStartedScreen extends StatelessWidget {
                 color: kPrimaryColor,
                 child: Text(
                   "Get Started",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
                 ),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(2)),
+                    borderRadius: BorderRadius.circular(3)),
               ),
             ),
             SizedBox(
