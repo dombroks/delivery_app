@@ -40,38 +40,44 @@ class PersonalDataScreen extends StatelessWidget {
                 height: screenSize.height * 0.1,
               ),
               Center(
-                child: Stack(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(2),
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: kPrimaryColor,
-                      ),
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/person.png"),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 2,
-                      right: 0,
-                      child: Container(
+                child: GestureDetector(
+                  child: Stack(
+                    children: [
+                      Container(
                         padding: EdgeInsets.all(2),
-                        width: 35,
-                        height: 35,
+                        width: 100,
+                        height: 100,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.white,
+                          color: kPrimaryColor,
                         ),
-                        child: Icon(
-                          Icons.camera_alt,
-                          size: 20,
+                        child: CircleAvatar(
+                          backgroundImage:
+                              AssetImage("assets/images/person.png"),
                         ),
                       ),
-                    ),
-                  ],
+                      Positioned(
+                        bottom: 2,
+                        right: 0,
+                        child: Container(
+                          padding: EdgeInsets.all(2),
+                          width: 35,
+                          height: 35,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white,
+                          ),
+                          child: Icon(
+                            Icons.camera_alt,
+                            size: 20,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    print("clicked on avatar");
+                  },
                 ),
               ),
               SizedBox(
