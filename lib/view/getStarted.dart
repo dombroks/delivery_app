@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class GetStartedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
         color: Colors.white,
@@ -32,7 +32,7 @@ class GetStartedScreen extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: size.height * 0.3,
+              height: screenSize.height * 0.3,
             ),
             SizedBox(
               width: 300,
