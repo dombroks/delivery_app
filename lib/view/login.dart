@@ -18,32 +18,73 @@ class LoginScreen extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  CustomTextFiled(
+                    screenSize: screenSize,
+                    hintText: "Email",
+                  ),
                   SizedBox(
-                    width: screenSize.width * 0.8,
-                    height: 48,
-                    child: TextField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
-                          border: new OutlineInputBorder(
-                            borderSide:
-                                BorderSide(width: 0, style: BorderStyle.none),
-                            borderRadius: const BorderRadius.all(
-                              const Radius.circular(8.0),
-                            ),
-                          ),
-                          hintText: "Email",
-                          filled: true,
-                          hintStyle: new TextStyle(
-                              color: kGrey.withOpacity(0.7),
-                              fontWeight: FontWeight.bold),
-                          fillColor: kGrey.withOpacity(0.12)),
-                    ),
+                    height: 20,
+                  ),
+                  CustomTextFiled(
+                    screenSize: screenSize,
+                    hintText: "Password",
+                    isForPasword: true,
                   ),
                 ],
               )
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class CustomTextFiled extends StatelessWidget {
+  const CustomTextFiled({
+    Key key,
+    @required this.screenSize,
+    @required this.hintText,
+    this.isForPasword = false,
+  }) : super(key: key);
+
+  final String hintText;
+  final bool isForPasword;
+  final Size screenSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: screenSize.width * 0.85,
+      height: 48,
+      child: TextField(
+        keyboardType: TextInputType.emailAddress,
+        decoration: InputDecoration(
+            suffixIcon: Visibility(
+              child: GestureDetector(
+                child: Icon(
+                  Icons.remove_red_eye,
+                  size: 18,
+                ),
+                onTap: () {
+                  print("isClicked");
+                },
+              ),
+              visible: isForPasword,
+            ),
+            border: new OutlineInputBorder(
+              borderSide: BorderSide(width: 0, style: BorderStyle.none),
+              borderRadius: const BorderRadius.all(
+                const Radius.circular(8.0),
+              ),
+            ),
+            hintText: "$hintText",
+            filled: true,
+            hintStyle: new TextStyle(
+                fontSize: 14,
+                color: kGrey.withOpacity(0.7),
+                fontWeight: FontWeight.bold),
+            fillColor: kGrey.withOpacity(0.12)),
       ),
     );
   }
