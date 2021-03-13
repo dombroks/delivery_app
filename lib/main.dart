@@ -1,5 +1,5 @@
-import 'package:delivery/view/getStarted.dart';
-import 'package:delivery/view/login.dart';
+import 'package:delivery/view/confirmEmailScreen.dart';
+import 'package:delivery/view/personalDataScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      home: LoginScreen(),
+      title: 'Delivery app',
+      home: PersonalDataScreen(),
     );
   }
 }
