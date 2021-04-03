@@ -1,3 +1,4 @@
+import 'package:delivery/service/ConnectivityService.dart';
 import 'package:delivery/view/getStarted.dart';
 import 'package:delivery/viewmodel/AuthViewModel.dart';
 
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AuthViewModel()),
+        StreamProvider(
+            create: (context) =>
+                ConnectivityService().connectionStatusController.stream),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

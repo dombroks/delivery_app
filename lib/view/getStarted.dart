@@ -1,16 +1,17 @@
-import 'package:delivery/constants.dart';
-import 'package:delivery/viewmodel/AuthViewModel.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
+import '../constants.dart';
 import 'component/CustomButton.dart';
 
 class GetStartedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<AuthViewModel>(context, listen: false);
+    ConnectivityStatus networkStatus = Provider.of<ConnectivityStatus>(context);
+    if (networkStatus == ConnectivityStatus.Offline) {
+      print("you are offline");
+    }
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -42,10 +43,7 @@ class GetStartedScreen extends StatelessWidget {
             ),
             CustomButton(
               text: "Get Started",
-              role: () {
-                print(provider.register("someone", "pass00word", "+21377589310",
-                    "tester3@gmail.com"));
-              },
+              role: () {},
             ),
             SizedBox(
               height: 10,
