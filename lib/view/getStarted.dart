@@ -1,3 +1,5 @@
+import 'package:delivery/utils.dart';
+import 'package:delivery/view/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
@@ -5,13 +7,21 @@ import 'package:provider/provider.dart';
 import '../constants.dart';
 import 'component/CustomButton.dart';
 
-class GetStartedScreen extends StatelessWidget {
+class GetStartedScreen extends StatefulWidget {
+  @override
+  _GetStartedScreenState createState() => _GetStartedScreenState();
+}
+
+class _GetStartedScreenState extends State<GetStartedScreen> {
   @override
   Widget build(BuildContext context) {
     ConnectivityStatus networkStatus = Provider.of<ConnectivityStatus>(context);
+
     if (networkStatus == ConnectivityStatus.Offline) {
-      print("you are offline");
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => LoginScreen()));
     }
+
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
