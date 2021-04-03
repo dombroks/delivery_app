@@ -1,7 +1,8 @@
-import 'package:delivery/view/confirmEmailScreen.dart';
-import 'package:delivery/view/navigationScreen.dart';
-import 'package:delivery/view/personalDataScreen.dart';
+import 'package:delivery/view/getStarted.dart';
+import 'package:delivery/viewmodel/AuthViewModel.dart';
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,10 +11,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Delivery app',
-      home: NavigationScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => AuthViewModel()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Delivery app',
+        home: GetStartedScreen(),
+      ),
     );
   }
 }

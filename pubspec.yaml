@@ -41,6 +41,9 @@ dependencies:
   shared_preferences: ^0.5.12+2
   firebase_storage: ^3.0.8
   google_maps_flutter: ^0.5.30
+  stripe_payment: ^1.0.10
+  dio: ^3.0.10
+
 
 
 dev_dependencies:

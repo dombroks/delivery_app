@@ -18,7 +18,9 @@ class CustomButton extends StatelessWidget {
       width: screenSize.width * 0.85,
       height: 45,
       child: RaisedButton(
-        onPressed: () {},
+        onPressed: () {
+          role();
+        },
         color: kPrimaryColor,
         child: Text(
           "$text",

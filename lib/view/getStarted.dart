@@ -1,12 +1,16 @@
 import 'package:delivery/constants.dart';
+import 'package:delivery/viewmodel/AuthViewModel.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 import 'component/CustomButton.dart';
 
 class GetStartedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AuthViewModel>(context, listen: false);
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
@@ -38,6 +42,11 @@ class GetStartedScreen extends StatelessWidget {
             ),
             CustomButton(
               text: "Get Started",
+              role: () {
+                print(provider
+                    .getTodos()
+                    .then((value) => print(value.toString())));
+              },
             ),
             SizedBox(
               height: 10,
@@ -48,4 +57,3 @@ class GetStartedScreen extends StatelessWidget {
     );
   }
 }
-
