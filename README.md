@@ -1,6 +1,6 @@
-# delivery
+# Fruit Delivery App
 
-A new Flutter project.
+Made with Flutter in order to get hands on provider package.
 
 ## Getting Started
 
