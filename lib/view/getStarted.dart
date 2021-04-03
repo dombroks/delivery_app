@@ -43,9 +43,8 @@ class GetStartedScreen extends StatelessWidget {
             CustomButton(
               text: "Get Started",
               role: () {
-                print(provider
-                    .getTodos()
-                    .then((value) => print(value.toString())));
+                print(provider.register("someone", "pass00word", "+21377589310",
+                    "tester3@gmail.com"));
               },
             ),
             SizedBox(
