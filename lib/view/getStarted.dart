@@ -12,6 +12,11 @@ class GetStartedScreen extends StatefulWidget {
 
 class _GetStartedScreenState extends State<GetStartedScreen> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     ConnectivityStatus networkStatus = Provider.of<ConnectivityStatus>(context);
 
@@ -24,6 +29,8 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
+        width: screenSize.width,
+        height: screenSize.height,
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

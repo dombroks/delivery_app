@@ -98,8 +98,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             .login(emailController.text.trim(),
                                 passwordController.text.trim())
                             .then((value) {
-                          print(emailController.text);
-                          print(passwordController.text);
                           if (value.trim() == "successful login") {
                             Navigator.pushNamed(context, "/getStartedScreen");
                           } else {
