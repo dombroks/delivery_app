@@ -1,4 +1,5 @@
 {
+    "app_name": "Delivery app",
     "get_started" : "Get Started",
     "login" : "Login",
     "register" : "Register",
