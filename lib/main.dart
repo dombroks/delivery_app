@@ -1,11 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:provider/provider.dart';
+
 import 'package:delivery/service/ConnectivityService.dart';
 import 'package:delivery/view/getStarted.dart';
 import 'package:delivery/view/login.dart';
 import 'package:delivery/view/noConnectionScreen.dart';
 import 'package:delivery/viewmodel/AuthViewModel.dart';
-
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,6 +23,12 @@ class MyApp extends StatelessWidget {
                 ConnectivityService().connectionStatusController.stream),
       ],
       child: MaterialApp(
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        supportedLocales: [const Locale('en', 'US'), const Locale('fr', 'FR')],
         initialRoute: '/',
         routes: {
           '/': (context) => LoginScreen(),
