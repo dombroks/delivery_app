@@ -1,5 +1,3 @@
-import 'package:delivery/utils.dart';
-import 'package:delivery/view/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
@@ -19,7 +17,7 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (networkStatus == ConnectivityStatus.Offline) {
-        Navigator.pushReplacementNamed(context, '/noConnectionScreen');
+        Navigator.pushNamed(context, '/noConnectionScreen');
       }
     });
 
