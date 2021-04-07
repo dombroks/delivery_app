@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         initialRoute: '/',
         routes: {
-          '/': (context) => GetStartedScreen(),
-          '/loginScreen': (context) => LoginScreen(),
+          '/': (context) => LoginScreen(),
+          '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
         },
         debugShowCheckedModeBanner: false,
@@ -34,4 +34,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

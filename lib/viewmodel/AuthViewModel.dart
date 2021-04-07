@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class AuthViewModel extends ChangeNotifier {
-  Future login(String username, String password) async {
+  Future<String> login(String username, String password) async {
     var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
-    var request =
-        http.Request('GET', Uri.parse('${baseUrl}accounts/profiles/'));
+    var request = http.Request('POST', Uri.parse('${baseUrl}accounts/login/'));
     request.bodyFields = {
       'username': username,
       'password': password,
@@ -16,9 +15,9 @@ class AuthViewModel extends ChangeNotifier {
     http.StreamedResponse response = await request.send();
 
     if (response.statusCode == 200) {
-      print("successful login");
+      return "successful login";
     } else {
-      print(response.reasonPhrase);
+      return response.reasonPhrase;
     }
   }
 

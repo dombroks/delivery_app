@@ -8,11 +8,13 @@ class CustomTextFiled extends StatefulWidget {
     @required this.screenSize,
     @required this.hintText,
     this.isForPasword = false,
+    this.controller,
   }) : super(key: key);
 
   final String hintText;
   final bool isForPasword;
   final Size screenSize;
+  final controller;
 
   @override
   _CustomTextFiledState createState() => _CustomTextFiledState();
@@ -27,6 +29,7 @@ class _CustomTextFiledState extends State<CustomTextFiled> {
       width: widget.screenSize.width * 0.85,
       height: 48,
       child: TextField(
+        controller: widget.controller,
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
             suffixIcon: Visibility(
