@@ -17,10 +17,11 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
   Widget build(BuildContext context) {
     ConnectivityStatus networkStatus = Provider.of<ConnectivityStatus>(context);
 
-    if (networkStatus == ConnectivityStatus.Offline) {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => LoginScreen()));
-    }
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (networkStatus == ConnectivityStatus.Offline) {
+        Navigator.pushReplacementNamed(context, '/noConnectionScreen');
+      }
+    });
 
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
