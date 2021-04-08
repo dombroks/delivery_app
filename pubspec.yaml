@@ -39,11 +39,10 @@ dependencies:
   intl: ^0.16.1
   image_picker: ^0.6.7+12
   shared_preferences: ^0.5.12+2
-  
   google_maps_flutter: ^0.5.30
-  
   dio: ^3.0.10
   connectivity: ^2.0.2
+  im_stepper: ^0.1.2
 
 
 

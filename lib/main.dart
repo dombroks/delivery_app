@@ -1,4 +1,5 @@
 import 'package:delivery/app_localization.dart';
+import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -29,7 +30,6 @@ class MyApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
           AppLocalizations.delegate
-          
         ],
         supportedLocales: [const Locale('en', 'US'), const Locale('fr', 'FR')],
         localeResolutionCallback: (locale, supportedLocales) {
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => LoginScreen(),
+          '/': (context) => FirstRegisterScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
         },
@@ -53,5 +53,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
