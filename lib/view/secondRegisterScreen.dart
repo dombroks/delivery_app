@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'component/CustomDotStepper.dart';
+import 'component/CustomOutlinedButton.dart';
 
 class SecondRegisterScreen extends StatelessWidget {
   @override
@@ -52,7 +53,7 @@ class SecondRegisterScreen extends StatelessWidget {
                       SizedBox(
                         width: 90,
                         height: 40,
-                        child: CustomButton(
+                        child: CustomOutlinedButton(
                           text: "Back",
                         ),
                       ),
