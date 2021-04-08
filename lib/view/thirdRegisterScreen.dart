@@ -1,36 +1,24 @@
-import 'dart:convert';
-import 'dart:io';
-import 'dart:typed_data';
-
-import 'package:delivery/constants.dart';
-import 'package:delivery/view/component/CustomButton.dart';
 import 'package:delivery/viewmodel/RegisterViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
+import '../constants.dart';
+import 'component/CustomButton.dart';
 import 'component/CustomDotStepper.dart';
 import 'component/CustomOutlinedButton.dart';
 
-class SecondRegisterScreen extends StatelessWidget {
-  Uint8List _bytesImage;
-  Widget _image;
+class ThirdRegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var registerViewModel = Provider.of<RegisterViewModel>(context);
     var screenSize = MediaQuery.of(context).size;
-
-    if (_bytesImage == null) {
-      _image = SvgPicture.asset("assets/images/user.svg");
-    } else {
-      _image = Image.memory(_bytesImage);
-    }
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
         backgroundColor: kPrimaryColor,
         centerTitle: true,
-        title: Text("Upload Profile Picture"),
+        title: Text("Upload ID Card"),
       ),
       body: Container(
         width: screenSize.width,
@@ -41,21 +29,18 @@ class SecondRegisterScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CustomDotStepper(
-                  activeDot: 1,
+                  activeDot: 2,
                 ),
                 SizedBox(
                   height: 50,
                 ),
                 GestureDetector(
                   child: SizedBox(
-                    child: _image,
+                    child: SvgPicture.asset("assets/images/ID vectorID.svg"),
                     width: screenSize.width * 0.6,
                     height: screenSize.height * 0.3,
                   ),
-                  onTap: () async {
-                    _bytesImage = Base64Decoder()
-                        .convert(registerViewModel.getImage().toString());
-                  },
+                  onTap: () async {},
                 ),
                 Text(
                   "Tap to select a picture",
@@ -75,7 +60,7 @@ class SecondRegisterScreen extends StatelessWidget {
                         height: 40,
                         child: CustomOutlinedButton(
                           role: () {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pushNamed('/secondRegisterScreen');
                           },
                           text: "Back",
                         ),
@@ -84,7 +69,7 @@ class SecondRegisterScreen extends StatelessWidget {
                         width: 90,
                         height: 40,
                         child: CustomButton(
-                          text: "Next",
+                          text: "Finish",
                         ),
                       ),
                     ],

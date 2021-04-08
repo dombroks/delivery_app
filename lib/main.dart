@@ -1,13 +1,14 @@
 import 'package:delivery/app_localization.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
+import 'package:delivery/view/thirdRegisterScreen.dart';
+import 'package:delivery/viewmodel/RegisterViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 import 'package:delivery/service/ConnectivityService.dart';
-import 'package:delivery/view/getStarted.dart';
-import 'package:delivery/view/login.dart';
+import 'package:delivery/view/getStartedScreen.dart';
 import 'package:delivery/view/noConnectionScreen.dart';
 import 'package:delivery/viewmodel/AuthViewModel.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AuthViewModel()),
+        ChangeNotifierProvider(create: (context) => RegisterViewModel()),
         StreamProvider(
             create: (context) =>
                 ConnectivityService().connectionStatusController.stream),
@@ -44,11 +46,12 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => SecondRegisterScreen(),
+          '/': (context) => ThirdRegisterScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
-          '/secondRegisterScree': (context) => SecondRegisterScreen(),
+          '/secondRegisterScreen': (context) => SecondRegisterScreen(),
+          '/thirdRegisterScreen': (context) => ThirdRegisterScreen(),
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',
