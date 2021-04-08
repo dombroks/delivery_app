@@ -61,7 +61,7 @@ class _ThirdRegisterScreenState extends State<ThirdRegisterScreen> {
                   height: screenSize.height * 0.15,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
                   child: Row(
                     children: [
                       Checkbox(
@@ -94,7 +94,7 @@ class _ThirdRegisterScreenState extends State<ThirdRegisterScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
