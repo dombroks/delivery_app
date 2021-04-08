@@ -1,5 +1,6 @@
 import 'package:delivery/app_localization.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
+import 'package:delivery/view/secondRegisterScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => FirstRegisterScreen(),
+          '/': (context) => SecondRegisterScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
         },

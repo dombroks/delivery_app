@@ -2,7 +2,6 @@ import 'package:delivery/constants.dart';
 import 'package:delivery/view/component/CustomButton.dart';
 import 'package:delivery/view/component/CustomTextField.dart';
 import 'package:flutter/material.dart';
-import 'package:im_stepper/stepper.dart';
 
 import 'component/CustomDotStepper.dart';
 
@@ -15,7 +14,7 @@ class FirstRegisterScreen extends StatelessWidget {
         elevation: 2,
         backgroundColor: kPrimaryColor,
         centerTitle: true,
-        title: Text("Create Your Profile"),
+        title: Text("Upload Personal Info"),
       ),
       body: Container(
         width: screenSize.width,
@@ -49,7 +48,10 @@ class FirstRegisterScreen extends StatelessWidget {
                   height: 15,
                 ),
                 CustomTextFiled(
-                    screenSize: screenSize, hintText: "Mobile Number",isForMobileNumber: true,),
+                  screenSize: screenSize,
+                  hintText: "Mobile Number",
+                  isForMobileNumber: true,
+                ),
                 SizedBox(
                   height: screenSize.height * 0.30,
                 ),
