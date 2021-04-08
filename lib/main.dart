@@ -47,6 +47,8 @@ class MyApp extends StatelessWidget {
           '/': (context) => SecondRegisterScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
+          '/firstRegisterScreen': (context) => FirstRegisterScreen(),
+          '/secondRegisterScree': (context) => SecondRegisterScreen(),
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',

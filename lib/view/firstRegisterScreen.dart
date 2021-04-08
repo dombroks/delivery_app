@@ -62,6 +62,9 @@ class FirstRegisterScreen extends StatelessWidget {
                       width: 90,
                       height: 40,
                       child: CustomButton(
+                        role: () {
+                          Navigator.pushNamed(context, '/secondRegisterScreen');
+                        },
                         text: "Next",
                       ),
                     ),

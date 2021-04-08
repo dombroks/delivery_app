@@ -1,6 +1,5 @@
 import 'package:delivery/constants.dart';
 import 'package:delivery/view/component/CustomButton.dart';
-import 'package:delivery/view/component/CustomTextField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -54,6 +53,9 @@ class SecondRegisterScreen extends StatelessWidget {
                         width: 90,
                         height: 40,
                         child: CustomOutlinedButton(
+                          role: () {
+                            Navigator.of(context).pop();
+                          },
                           text: "Back",
                         ),
                       ),
