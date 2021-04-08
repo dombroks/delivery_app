@@ -49,7 +49,7 @@ class FirstRegisterScreen extends StatelessWidget {
                   height: 15,
                 ),
                 CustomTextFiled(
-                    screenSize: screenSize, hintText: "Mobile Number"),
+                    screenSize: screenSize, hintText: "Mobile Number",isForMobileNumber: true,),
                 SizedBox(
                   height: screenSize.height * 0.30,
                 ),

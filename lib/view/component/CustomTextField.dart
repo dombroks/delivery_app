@@ -9,11 +9,13 @@ class CustomTextFiled extends StatefulWidget {
     @required this.hintText,
     this.isForPasword = false,
     this.controller,
+    this.isForMobileNumber = false,
   }) : super(key: key);
 
   final String hintText;
   final bool isForPasword;
   final Size screenSize;
+  final isForMobileNumber;
   final controller;
 
   @override
@@ -25,12 +27,19 @@ class _CustomTextFiledState extends State<CustomTextFiled> {
 
   @override
   Widget build(BuildContext context) {
+    TextInputType type;
+    if (widget.isForMobileNumber) {
+      type = TextInputType.phone;
+    } else {
+      type = TextInputType.text;
+    }
+
     return SizedBox(
       width: widget.screenSize.width * 0.85,
       height: 48,
       child: TextField(
         controller: widget.controller,
-        keyboardType: TextInputType.emailAddress,
+        keyboardType: type,
         decoration: InputDecoration(
             suffixIcon: Visibility(
               child: GestureDetector(
