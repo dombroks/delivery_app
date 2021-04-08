@@ -75,7 +75,7 @@ class SecondRegisterScreen extends StatelessWidget {
                         height: 40,
                         child: CustomOutlinedButton(
                           role: () {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).pushNamed('/firstRegistrationScreen');
                           },
                           text: "Back",
                         ),
@@ -85,6 +85,10 @@ class SecondRegisterScreen extends StatelessWidget {
                         height: 40,
                         child: CustomButton(
                           text: "Next",
+                          role: () {
+                            Navigator.of(context)
+                                .pushNamed('/thirdRegisterScreen');
+                          },
                         ),
                       ),
                     ],

@@ -42,8 +42,11 @@ class ThirdRegisterScreen extends StatelessWidget {
                   ),
                   onTap: () async {},
                 ),
+                SizedBox(
+                  height: 15,
+                ),
                 Text(
-                  "Tap to select a picture",
+                  "Tap to select ID card picture",
                   style: TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 17, color: kGrey),
                 ),
@@ -60,7 +63,8 @@ class ThirdRegisterScreen extends StatelessWidget {
                         height: 40,
                         child: CustomOutlinedButton(
                           role: () {
-                            Navigator.of(context).pushNamed('/secondRegisterScreen');
+                            Navigator.of(context)
+                                .pushNamed('/secondRegisterScreen');
                           },
                           text: "Back",
                         ),
