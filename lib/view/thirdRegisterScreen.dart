@@ -8,11 +8,17 @@ import 'component/CustomButton.dart';
 import 'component/CustomDotStepper.dart';
 import 'component/CustomOutlinedButton.dart';
 
-class ThirdRegisterScreen extends StatelessWidget {
+class ThirdRegisterScreen extends StatefulWidget {
+  @override
+  _ThirdRegisterScreenState createState() => _ThirdRegisterScreenState();
+}
+
+class _ThirdRegisterScreenState extends State<ThirdRegisterScreen> {
   @override
   Widget build(BuildContext context) {
     var registerViewModel = Provider.of<RegisterViewModel>(context);
     var screenSize = MediaQuery.of(context).size;
+    bool isChecked = false;
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
@@ -46,12 +52,25 @@ class ThirdRegisterScreen extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  "Tap to select ID card picture",
+                  "Tap to upload your ID card",
                   style: TextStyle(
                       fontWeight: FontWeight.bold, fontSize: 17, color: kGrey),
                 ),
                 SizedBox(
-                  height: screenSize.height * 0.3,
+                  height: screenSize.height * 0.15,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: CheckboxListTile(
+                      value: isChecked,
+                      onChanged: (val) {
+                        setState(() {
+                          isChecked = true;
+                        });
+                      }),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
