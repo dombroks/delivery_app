@@ -14,11 +14,12 @@ class ThirdRegisterScreen extends StatefulWidget {
 }
 
 class _ThirdRegisterScreenState extends State<ThirdRegisterScreen> {
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     var registerViewModel = Provider.of<RegisterViewModel>(context);
     var screenSize = MediaQuery.of(context).size;
-    bool isChecked = false;
+
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
@@ -61,13 +62,36 @@ class _ThirdRegisterScreenState extends State<ThirdRegisterScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: CheckboxListTile(
-                      value: isChecked,
-                      onChanged: (val) {
-                        setState(() {
-                          isChecked = true;
-                        });
-                      }),
+                  child: Row(
+                    children: [
+                      Checkbox(
+                          activeColor: kPrimaryColor,
+                          checkColor: kPrimaryColor,
+                          value: isChecked,
+                          onChanged: (val) {
+                            setState(() {
+                              isChecked = !isChecked;
+                            });
+                          }),
+                      Text(
+                        "I agree to the ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      GestureDetector(
+                        child: Text("Terms and Conditions",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: kPrimaryColor,
+                                fontSize: 15)),
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed('/termsAndConditionsScreen');
+                        },
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 10,

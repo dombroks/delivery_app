@@ -1,6 +1,7 @@
 import 'package:delivery/app_localization.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
+import 'package:delivery/view/termsAndConditionsScreen.dart';
 import 'package:delivery/view/thirdRegisterScreen.dart';
 import 'package:delivery/viewmodel/RegisterViewModel.dart';
 import 'package:flutter/material.dart';
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
           '/secondRegisterScreen': (context) => SecondRegisterScreen(),
           '/thirdRegisterScreen': (context) => ThirdRegisterScreen(),
+          '/termsAndConditionsScreen': (context) => TermsAndConditionsScreen(),
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',
