@@ -3,8 +3,10 @@ import 'dart:async';
 import 'package:delivery/utils/constants.dart';
 import 'package:delivery/view/component/CustomButton.dart';
 import 'package:delivery/view/component/CustomTextField.dart';
+import 'package:delivery/viewmodel/AuthViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 class ConfirmEmail extends StatefulWidget {
   @override
@@ -12,7 +14,7 @@ class ConfirmEmail extends StatefulWidget {
 }
 
 class _ConfirmEmailState extends State<ConfirmEmail> {
-  Duration timeout = Duration(seconds: 10);
+  Duration timeout = Duration(minutes: 2);
   bool isVisible = false;
 
   void startTimer() {
@@ -21,7 +23,7 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
         timeout = timeout - Duration(seconds: 1);
       });
       if (timeout == Duration(seconds: -1)) {
-        timeout = Duration(seconds: 10);
+        timeout = Duration(minutes: 2);
         isVisible = true;
         timer.cancel();
       }
@@ -37,6 +39,7 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    var authViewModel = Provider.of<AuthViewModel>(context);
     return Scaffold(
       body: SafeArea(
           child: SingleChildScrollView(
@@ -91,6 +94,7 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
                         color: kGrey.withOpacity(0.8)),
                   ),
                   onTap: () {
+                    authViewModel.resendActivationCode();
                     startTimer();
                     setState(() {
                       isVisible = false;

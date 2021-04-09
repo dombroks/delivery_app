@@ -12,5 +12,6 @@ class AuthViewModel extends ChangeNotifier {
   Future changePassowrd(username, password, phone, email) =>
       _repository.changePassowrd(username, password, phone, email);
 
+  Future resendActivationCode() => _repository.resendActivationCode();
   Future logout() => _repository.logout();
 }

@@ -70,5 +70,9 @@ class Repository {
     }
   }
 
+  Future<void> resendActivationCode(){
+    
+  }
+
   Future logout() {}
 }
