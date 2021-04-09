@@ -1,65 +1,16 @@
-import 'package:delivery/utils/constants.dart';
+import 'package:delivery/data/repository/Repository.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 class AuthViewModel extends ChangeNotifier {
-  Future<String> login(String username, String password) async {
-    var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
-    var request = http.Request('POST', Uri.parse('${baseUrl}accounts/login/'));
-    request.bodyFields = {
-      'username': username,
-      'password': password,
-    };
-    request.headers.addAll(headers);
+  Repository _repository = Repository();
+  Future<String> login(username, password) =>
+      _repository.login(username, password);
 
-    http.StreamedResponse response = await request.send();
+  Future<String> register(username, password, phone, email) =>
+      _repository.register(username, password, phone, email);
 
-    if (response.statusCode == 200) {
-      return "successful login";
-    } else {
-      return response.reasonPhrase;
-    }
-  }
+  Future changePassowrd(username, password, phone, email) =>
+      _repository.changePassowrd(username, password, phone, email);
 
-  Future register(
-      String username, String password, String phone, String email) async {
-    var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
-    var request =
-        http.Request('POST', Uri.parse('${baseUrl}accounts/users/register/'));
-    request.bodyFields = {
-      'username': username,
-      'password': password,
-      'user_type': 'A',
-      'phone': phone,
-      'email': email
-    };
-    request.headers.addAll(headers);
-
-    http.StreamedResponse response = await request.send();
-
-    if (response.statusCode == 200) {
-      print("successful registering");
-    } else {
-      print(response.reasonPhrase);
-    }
-  }
-
-  Future changePassowrd(
-      String username, String password, String phone, String email) async {
-    var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
-    var request =
-        http.Request('PATCH', Uri.parse('${baseUrl}accounts/users/2/'));
-    request.bodyFields = {'password': 'password'};
-    request.headers.addAll(headers);
-
-    http.StreamedResponse response = await request.send();
-
-    if (response.statusCode == 200) {
-      print("password has been changed");
-    } else {
-      print(response.reasonPhrase);
-    }
-  }
-
-  Future logout() {}
+  Future logout() => _repository.logout();
 }
