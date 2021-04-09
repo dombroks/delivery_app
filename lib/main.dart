@@ -1,5 +1,6 @@
 import 'package:delivery/utils/app_localization.dart';
 import 'package:delivery/view/confirmEmailScreen.dart';
+import 'package:delivery/view/confirmPhoneNumber.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => ConfirmEmail(),
+          '/': (context) => ConfirmPhoneNumberScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
@@ -58,6 +59,7 @@ class MyApp extends StatelessWidget {
           '/termsAndConditionsScreen': (context) => TermsAndConditionsScreen(),
           '/confirmEmailScreen': (context) => ConfirmEmail(),
           '/personalDataScreen': (context) => PersonalDataScreen(),
+          '/confirmPhoneNumberScreen': (context) => ConfirmPhoneNumberScreen()
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',

@@ -8,12 +8,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
-class ConfirmEmail extends StatefulWidget {
+class ConfirmPhoneNumberScreen extends StatefulWidget {
   @override
-  _ConfirmEmailState createState() => _ConfirmEmailState();
+  _ConfirmPhoneNumberScreenState createState() =>
+      _ConfirmPhoneNumberScreenState();
 }
 
-class _ConfirmEmailState extends State<ConfirmEmail> {
+class _ConfirmPhoneNumberScreenState extends State<ConfirmPhoneNumberScreen> {
   Duration timeout = Duration(minutes: 2);
   bool isVisible = false;
 
@@ -60,9 +61,12 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
                   shape: BoxShape.circle,
                   color: kGrey.withOpacity(0.18),
                 ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    "assets/images/confirmEmail.svg",
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      "assets/images/phone.svg",
+                    ),
                   ),
                 ),
               ),
