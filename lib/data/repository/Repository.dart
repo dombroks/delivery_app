@@ -2,7 +2,16 @@ import 'package:http/http.dart' as http;
 
 import 'package:delivery/utils/constants.dart';
 
-class Repository{
+class Repository {
+  static Repository _instance;
+
+  static Repository getInstance() {
+    if (_instance == null) {
+      _instance = Repository();
+    }
+    return _instance;
+  }
+
   Future<String> login(String username, String password) async {
     var headers = {'Content-Type': 'application/x-www-form-urlencoded'};
     var request = http.Request('POST', Uri.parse('${baseUrl}accounts/login/'));

@@ -2,7 +2,7 @@ import 'package:delivery/data/repository/Repository.dart';
 import 'package:flutter/material.dart';
 
 class AuthViewModel extends ChangeNotifier {
-  Repository _repository = Repository();
+  Repository _repository = Repository.getInstance();
   Future<String> login(username, password) =>
       _repository.login(username, password);
 
