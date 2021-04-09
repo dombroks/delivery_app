@@ -1,4 +1,5 @@
 import 'package:delivery/app_localization.dart';
+import 'package:delivery/view/confirmEmailScreen.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
 import 'package:delivery/view/termsAndConditionsScreen.dart';
@@ -47,13 +48,15 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => ThirdRegisterScreen(),
+          '/': (context) => ConfirmEmail(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
           '/secondRegisterScreen': (context) => SecondRegisterScreen(),
           '/thirdRegisterScreen': (context) => ThirdRegisterScreen(),
           '/termsAndConditionsScreen': (context) => TermsAndConditionsScreen(),
+          '/confirmEmailScreen' : (context) => ConfirmEmail(),
+          
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',

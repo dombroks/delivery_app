@@ -4,7 +4,14 @@ import 'package:delivery/view/component/CustomTextField.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ConfirmEmail extends StatelessWidget {
+class ConfirmEmail extends StatefulWidget {
+  @override
+  _ConfirmEmailState createState() => _ConfirmEmailState();
+}
+
+class _ConfirmEmailState extends State<ConfirmEmail>
+  {
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -39,11 +46,6 @@ class ConfirmEmail extends StatelessWidget {
             CustomTextFiled(screenSize: screenSize, hintText: "Enter code"),
             SizedBox(
               height: 10,
-            ),
-            Text(
-              "02:33",
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, color: kGrey.withOpacity(0.8)),
             ),
             SizedBox(
               height: 10,

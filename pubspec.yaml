@@ -43,6 +43,7 @@ dependencies:
   dio: ^3.0.10
   connectivity: ^2.0.2
   im_stepper: ^0.1.2
+  flutter_countdown_timer: ^3.0.1
 
 
 
