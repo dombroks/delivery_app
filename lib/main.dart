@@ -2,6 +2,7 @@ import 'package:delivery/utils/app_localization.dart';
 import 'package:delivery/view/confirmEmailScreen.dart';
 import 'package:delivery/view/confirmPhoneNumber.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
+import 'package:delivery/view/homeScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
 import 'package:delivery/view/termsAndConditionsScreen.dart';
@@ -50,7 +51,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => ConfirmPhoneNumberScreen(),
+          '/': (context) => HomeScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
