@@ -12,14 +12,16 @@ class ConfirmEmail extends StatefulWidget {
 }
 
 class _ConfirmEmailState extends State<ConfirmEmail> {
-  Duration timeout = Duration(minutes: 2);
+  Duration timeout = Duration(seconds: 10);
 
   void startTimer() {
     Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         timeout = timeout - Duration(seconds: 1);
-        print(timeout.toString());
       });
+      if (timeout == Duration(seconds: -1)) {
+        timeout = Duration(seconds: 10);
+      }
     });
   }
 
@@ -69,7 +71,7 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
                 height: 10,
               ),
               Text(
-                timeout.toString().substring(2,7),
+                timeout.toString().substring(2, 7),
                 style: TextStyle(
                     decoration: TextDecoration.underline,
                     fontWeight: FontWeight.bold,
