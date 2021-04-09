@@ -1,4 +1,4 @@
-import 'package:delivery/app_localization.dart';
+import 'package:delivery/utils/app_localization.dart';
 import 'package:delivery/view/confirmEmailScreen.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';

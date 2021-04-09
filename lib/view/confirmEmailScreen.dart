@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:delivery/constants.dart';
+import 'package:delivery/utils/constants.dart';
 import 'package:delivery/view/component/CustomButton.dart';
 import 'package:delivery/view/component/CustomTextField.dart';
 import 'package:flutter/material.dart';

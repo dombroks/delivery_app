@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:im_stepper/stepper.dart';
 
-import '../../constants.dart';
+import '../../utils/constants.dart';
 
 class CustomDotStepper extends StatelessWidget {
   final int activeDot;

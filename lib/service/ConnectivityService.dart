@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:connectivity/connectivity.dart';
 
-import '../constants.dart';
+import '../utils/constants.dart';
 
 class ConnectivityService {
   StreamController<ConnectivityStatus> connectionStatusController =

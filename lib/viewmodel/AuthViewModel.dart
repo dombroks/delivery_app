@@ -1,4 +1,4 @@
-import 'package:delivery/constants.dart';
+import 'package:delivery/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
