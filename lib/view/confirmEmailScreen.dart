@@ -13,6 +13,7 @@ class ConfirmEmail extends StatefulWidget {
 
 class _ConfirmEmailState extends State<ConfirmEmail> {
   Duration timeout = Duration(seconds: 10);
+  bool isVisible = false;
 
   void startTimer() {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -21,6 +22,8 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
       });
       if (timeout == Duration(seconds: -1)) {
         timeout = Duration(seconds: 10);
+        isVisible = true;
+        timer.cancel();
       }
     });
   }
@@ -65,10 +68,7 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
               ),
               CustomTextFiled(screenSize: screenSize, hintText: "Enter code"),
               SizedBox(
-                height: 10,
-              ),
-              SizedBox(
-                height: 10,
+                height: 20,
               ),
               Text(
                 timeout.toString().substring(2, 7),
@@ -77,12 +77,26 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
                     fontWeight: FontWeight.bold,
                     color: kGrey.withOpacity(0.8)),
               ),
-              Text(
-                "Resend code",
-                style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    fontWeight: FontWeight.bold,
-                    color: kGrey.withOpacity(0.8)),
+              SizedBox(
+                height: 20,
+              ),
+              Visibility(
+                visible: isVisible,
+                child: GestureDetector(
+                  child: Text(
+                    "Resend code",
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.bold,
+                        color: kGrey.withOpacity(0.8)),
+                  ),
+                  onTap: () {
+                    startTimer();
+                    setState(() {
+                      isVisible = false;
+                    });
+                  },
+                ),
               ),
               SizedBox(
                 height: screenSize.height * 0.1,
