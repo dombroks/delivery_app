@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => SideDrawer(),
+          '/': (context) => HomeScreen(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
