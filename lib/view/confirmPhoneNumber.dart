@@ -17,6 +17,7 @@ class ConfirmPhoneNumberScreen extends StatefulWidget {
 class _ConfirmPhoneNumberScreenState extends State<ConfirmPhoneNumberScreen> {
   Duration timeout = Duration(minutes: 2);
   bool isVisible = false;
+  final codeController = TextEditingController();
 
   void startTimer() {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -35,6 +36,11 @@ class _ConfirmPhoneNumberScreenState extends State<ConfirmPhoneNumberScreen> {
   void initState() {
     startTimer();
     super.initState();
+  }
+
+  void dispose() {
+    codeController.dispose();
+    super.dispose();
   }
 
   @override
@@ -73,7 +79,11 @@ class _ConfirmPhoneNumberScreenState extends State<ConfirmPhoneNumberScreen> {
               SizedBox(
                 height: screenSize.height * 0.1,
               ),
-              CustomTextFiled(screenSize: screenSize, hintText: "Enter code"),
+              CustomTextFiled(
+                screenSize: screenSize,
+                hintText: "Enter code",
+                controller: codeController,
+              ),
               SizedBox(
                 height: 20,
               ),
@@ -111,6 +121,9 @@ class _ConfirmPhoneNumberScreenState extends State<ConfirmPhoneNumberScreen> {
               ),
               CustomButton(
                 text: "Confirm code",
+                role: () {
+                  authViewModel.confirmSentCode(codeController.text.trim());
+                },
               )
             ],
           ),

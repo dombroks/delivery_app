@@ -16,6 +16,7 @@ class ConfirmEmail extends StatefulWidget {
 class _ConfirmEmailState extends State<ConfirmEmail> {
   Duration timeout = Duration(minutes: 2);
   bool isVisible = false;
+  final codeController = TextEditingController();
 
   void startTimer() {
     Timer.periodic(Duration(seconds: 1), (timer) {
@@ -34,6 +35,11 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
   void initState() {
     startTimer();
     super.initState();
+  }
+
+  void dispose() {
+    codeController.dispose();
+    super.dispose();
   }
 
   @override
@@ -107,6 +113,9 @@ class _ConfirmEmailState extends State<ConfirmEmail> {
               ),
               CustomButton(
                 text: "Confirm code",
+                role: () {
+                  authViewModel.confirmSentCode(codeController.text.trim());
+                },
               )
             ],
           ),
