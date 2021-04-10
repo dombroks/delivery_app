@@ -7,12 +7,14 @@ class CustomSideDrawerRowItem extends StatelessWidget {
     this.title,
     this.destinationScreen,
     this.icon,
+    this.isForLogout = false,
   }) : super(key: key);
 
   final Size screenSize;
   final String title;
   final String destinationScreen;
   final IconData icon;
+  final isForLogout;
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +45,12 @@ class CustomSideDrawerRowItem extends StatelessWidget {
           ],
         ),
         GestureDetector(
-          child: Icon(
-            Icons.arrow_forward_ios,
-            size: 15,
+          child: Visibility(
+            visible: !isForLogout,
+            child: Icon(
+              Icons.arrow_forward_ios,
+              size: 15,
+            ),
           ),
           onTap: () {
             Navigator.of(context).pushNamed(destinationScreen);

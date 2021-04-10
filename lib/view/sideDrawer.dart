@@ -101,7 +101,64 @@ class _SideDrawerState extends State<SideDrawer> {
                   icon: Icons.star,
                   title: "Reviews",
                   destinationScreen: "/personalDataScreen",
-                )
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: screenSize.width * 0.9,
+                  height: 0.4,
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.insert_drive_file,
+                  title: "Terms & Conditions",
+                  destinationScreen: "/termsAndConditionsScreen",
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.help,
+                  title: "FAQs",
+                  destinationScreen: "/personalDataScreen",
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.supervisor_account,
+                  title: "Contact Support",
+                  destinationScreen: "/personalDataScreen",
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.settings,
+                  title: "Settings",
+                  destinationScreen: "/personalDataScreen",
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.15,
+                ),
+                GestureDetector(
+                  child: CustomSideDrawerRowItem(
+                    isForLogout: true,
+                    screenSize: screenSize,
+                    icon: Icons.exit_to_app,
+                    title: "Logout",
+                    destinationScreen: "/personalDataScreen",
+                  ),
+                  onTap: () {},
+                ),
               ],
             ),
           ),
