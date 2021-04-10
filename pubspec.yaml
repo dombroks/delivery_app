@@ -59,10 +59,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/fonts/
     - assets/icons/
     - assets/images/
     - lang/en.json
     - lang/fr.json
+  fonts:
+    - family: AppIcons
+      fonts:
+        - asset: assets/fonts/AppIcons.ttf
 
 
 
