@@ -1,6 +1,8 @@
 import 'package:delivery/utils/app_localization.dart';
 import 'package:delivery/view/confirmEmailScreen.dart';
 import 'package:delivery/view/confirmPhoneNumber.dart';
+import 'package:delivery/view/darkTheme/darkThemeProvider.dart';
+import 'package:delivery/view/darkTheme/styles.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/homeScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';
@@ -23,11 +25,30 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  DarkThemeProvider themeChangeProvider = new DarkThemeProvider();
+
+  @override
+  void initState() {
+    super.initState();
+    getCurrentAppTheme();
+  }
+
+  void getCurrentAppTheme() async {
+    themeChangeProvider.darkTheme =
+        await themeChangeProvider.darkThemePreference.getTheme();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (_) => themeChangeProvider),
         ChangeNotifierProvider(create: (context) => AuthViewModel()),
         ChangeNotifierProvider(create: (context) => RegisterViewModel()),
         StreamProvider(
@@ -62,10 +83,12 @@ class MyApp extends StatelessWidget {
           '/termsAndConditionsScreen': (context) => TermsAndConditionsScreen(),
           '/confirmEmailScreen': (context) => ConfirmEmail(),
           '/personalDataScreen': (context) => PersonalDataScreen(),
-          '/confirmPhoneNumberScreen': (context) => ConfirmPhoneNumberScreen()
+          '/confirmPhoneNumberScreen': (context) => ConfirmPhoneNumberScreen(),
+          '/homeScreen' : (context) => HomeScreen()
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',
+          theme: Styles.themeData(themeChangeProvider.darkTheme, context),
       ),
     );
   }

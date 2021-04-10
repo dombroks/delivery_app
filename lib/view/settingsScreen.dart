@@ -1,7 +1,5 @@
-import 'package:delivery/view/app_icons.dart';
-import 'package:delivery/utils/constants.dart';
+import 'package:delivery/view/component/app_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'component/CustomSettingsScreenRowItem.dart';
 
@@ -14,7 +12,9 @@ class SettingsScreen extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/homeScreen');
+          },
           color: Colors.black,
         ),
         title: Text(

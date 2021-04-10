@@ -134,7 +134,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.supervisor_account,
-                  title: "Contact Support",
+                  title: "Help Center",
                   destinationScreen: "/personalDataScreen",
                 ),
                 SizedBox(
