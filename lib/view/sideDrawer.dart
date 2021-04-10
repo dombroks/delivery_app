@@ -1,6 +1,8 @@
 import 'package:delivery/utils/constants.dart';
 import 'package:flutter/material.dart';
 
+import 'component/CustomSideDrawerRowItem.dart';
+
 class SideDrawer extends StatefulWidget {
   @override
   _SideDrawerState createState() => _SideDrawerState();
@@ -9,12 +11,13 @@ class SideDrawer extends StatefulWidget {
 class _SideDrawerState extends State<SideDrawer> {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SafeArea(
         child: Container(
           color: Colors.white,
           child: Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(30.0),
             child: Column(
               children: [
                 Row(
@@ -54,6 +57,50 @@ class _SideDrawerState extends State<SideDrawer> {
                       ),
                     )
                   ],
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                Container(
+                  color: Colors.grey[400],
+                  width: screenSize.width * 0.9,
+                  height: 0.4,
+                ),
+                SizedBox(
+                  height: screenSize.height * 0.035,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.account_circle,
+                  title: "Personal Data",
+                  destinationScreen: "/personalDataScreen",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.history,
+                  title: "History",
+                  destinationScreen: "/personalDataScreen",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.attach_money,
+                  title: "Account",
+                  destinationScreen: "/personalDataScreen",
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                CustomSideDrawerRowItem(
+                  screenSize: screenSize,
+                  icon: Icons.star,
+                  title: "Reviews",
+                  destinationScreen: "/personalDataScreen",
                 )
               ],
             ),
