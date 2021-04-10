@@ -5,6 +5,7 @@ import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/homeScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
+import 'package:delivery/view/sideDrawer.dart';
 import 'package:delivery/view/termsAndConditionsScreen.dart';
 import 'package:delivery/view/thirdRegisterScreen.dart';
 import 'package:delivery/viewmodel/RegisterViewModel.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
         },
         initialRoute: '/',
         routes: {
-          '/': (context) => HomeScreen(),
+          '/': (context) => SideDrawer(),
           '/getStartedScreen': (context) => GetStartedScreen(),
           '/noConnectionScreen': (context) => NoConnectionScreen(),
           '/firstRegisterScreen': (context) => FirstRegisterScreen(),
