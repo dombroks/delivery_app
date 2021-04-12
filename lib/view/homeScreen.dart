@@ -1,9 +1,14 @@
 import 'package:delivery/view/sideDrawer.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+   
+    bool isActivated = false;
     return Scaffold(
       drawer: SideDrawer(),
       appBar: AppBar(
@@ -21,6 +26,10 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Container(
         color: Colors.white,
+        child: RaisedButton(onPressed: () {
+         
+          
+        }),
       ),
     );
   }

@@ -1,5 +1,4 @@
 import 'package:delivery/utils/constants.dart';
-import 'package:delivery/view/darkTheme/darkThemeProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +12,7 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
     this.widget,
   }) : super(key: key);
   final Size screenSize;
+
   final String title;
   final String subTitle;
   final IconData icon;
@@ -20,7 +20,6 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final themeChange = Provider.of<DarkThemeProvider>(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -73,10 +72,9 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
           ],
         ),
         Switch(
-          value: themeChange.darkTheme,
-          onChanged: (val) {
-            themeChange.darkTheme = val;
-            print(val);
+          value: true,
+          onChanged: (val){
+
           },
           activeColor: kPrimaryColor,
           hoverColor: Colors.white,

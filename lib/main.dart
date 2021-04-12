@@ -1,14 +1,12 @@
 import 'package:delivery/utils/app_localization.dart';
+import 'package:delivery/utils/constants.dart';
 import 'package:delivery/view/confirmEmailScreen.dart';
 import 'package:delivery/view/confirmPhoneNumber.dart';
-import 'package:delivery/view/darkTheme/darkThemeProvider.dart';
-import 'package:delivery/view/darkTheme/styles.dart';
 import 'package:delivery/view/firstRegisterScreen.dart';
 import 'package:delivery/view/homeScreen.dart';
 import 'package:delivery/view/personalDataScreen.dart';
 import 'package:delivery/view/secondRegisterScreen.dart';
 import 'package:delivery/view/settingsScreen.dart';
-import 'package:delivery/view/sideDrawer.dart';
 import 'package:delivery/view/termsAndConditionsScreen.dart';
 import 'package:delivery/view/thirdRegisterScreen.dart';
 import 'package:delivery/viewmodel/RegisterViewModel.dart';
@@ -31,24 +29,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  DarkThemeProvider themeChangeProvider = new DarkThemeProvider();
-
   @override
   void initState() {
     super.initState();
     getCurrentAppTheme();
   }
 
-  void getCurrentAppTheme() async {
-    themeChangeProvider.darkTheme =
-        await themeChangeProvider.darkThemePreference.getTheme();
-  }
+  void getCurrentAppTheme() async {}
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => themeChangeProvider),
         ChangeNotifierProvider(create: (context) => AuthViewModel()),
         ChangeNotifierProvider(create: (context) => RegisterViewModel()),
         StreamProvider(
@@ -84,11 +76,11 @@ class _MyAppState extends State<MyApp> {
           '/confirmEmailScreen': (context) => ConfirmEmail(),
           '/personalDataScreen': (context) => PersonalDataScreen(),
           '/confirmPhoneNumberScreen': (context) => ConfirmPhoneNumberScreen(),
-          '/homeScreen' : (context) => HomeScreen()
+          '/homeScreen': (context) => HomeScreen()
         },
         debugShowCheckedModeBanner: false,
         title: 'Delivery app',
-          theme: Styles.themeData(themeChangeProvider.darkTheme, context),
+        theme: ThemeData.light().copyWith(primaryColor: kPrimaryColor),
       ),
     );
   }
