@@ -1,7 +1,7 @@
 import 'package:delivery/view/component/app_icons.dart';
 import 'package:flutter/material.dart';
 
-import 'component/CustomSettingsScreenRowItem.dart';
+import '../component/CustomSettingsScreenRowItem.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override

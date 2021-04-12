@@ -3,7 +3,7 @@ import 'package:delivery/view/component/CustomButton.dart';
 import 'package:delivery/view/component/CustomTextField.dart';
 import 'package:flutter/material.dart';
 
-import 'component/CustomDotStepper.dart';
+import '../component/CustomDotStepper.dart';
 
 class FirstRegisterScreen extends StatelessWidget {
   @override

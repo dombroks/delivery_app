@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
-import '../utils/constants.dart';
-import 'component/CustomButton.dart';
-import 'component/CustomDotStepper.dart';
-import 'component/CustomOutlinedButton.dart';
+import '../../utils/constants.dart';
+import '../component/CustomButton.dart';
+import '../component/CustomDotStepper.dart';
+import '../component/CustomOutlinedButton.dart';
 
 class ThirdRegisterScreen extends StatefulWidget {
   @override

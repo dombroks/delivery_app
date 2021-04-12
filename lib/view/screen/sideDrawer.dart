@@ -1,7 +1,7 @@
 import 'package:delivery/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'component/CustomSideDrawerRowItem.dart';
+import '../component/CustomSideDrawerRowItem.dart';
 
 class SideDrawer extends StatefulWidget {
   @override
