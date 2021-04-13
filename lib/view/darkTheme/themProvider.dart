@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class ThemeProvider extends ChangeNotifier {
   ThemeData _selectedTheme;
   ThemeData light = ThemeData.light().copyWith(
+    primaryColorLight: kPrimaryColor,
+    accentColor: kPrimaryColor,
     buttonTheme: ButtonThemeData(buttonColor: kPrimaryColor),
     appBarTheme: AppBarTheme(
       brightness: Brightness.light,
@@ -21,7 +23,6 @@ class ThemeProvider extends ChangeNotifier {
     ),
     brightness: Brightness.light,
     scaffoldBackgroundColor: Colors.white,
-    primaryColor: kPrimaryColor,
     canvasColor: Colors.white,
     buttonColor: kPrimaryColor,
   );

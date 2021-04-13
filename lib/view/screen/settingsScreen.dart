@@ -1,12 +1,25 @@
 import 'package:delivery/view/component/app_icons.dart';
+import 'package:delivery/view/darkTheme/themProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../component/CustomSettingsScreenRowItem.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
+  @override
+  _SettingsScreenState createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  bool isInWork = true;
+  bool isDarkMode = false;
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
+    ThemeProvider themeProvider =
+        Provider.of<ThemeProvider>(context, listen: false);
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -38,6 +51,13 @@ class SettingsScreen extends StatelessWidget {
                   title: "In work",
                   subTitle: "Update your work state",
                   icon: Icons.directions_car,
+                  widget: Switch(
+                      value: isInWork,
+                      onChanged: (value) {
+                        setState(() {
+                          isInWork = value;
+                        });
+                      }),
                 ),
                 SizedBox(
                   height: 30,
@@ -46,6 +66,13 @@ class SettingsScreen extends StatelessWidget {
                   title: "Language",
                   subTitle: "Select language",
                   icon: Icons.language,
+                  widget: Row(
+                    children: [
+                      Text("EN"),
+                      SizedBox(width: 5),
+                      Icon(Icons.arrow_right)
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 30,
@@ -54,6 +81,14 @@ class SettingsScreen extends StatelessWidget {
                   title: "Dark Mode",
                   subTitle: "Toggle app mode",
                   icon: AppIcons.moon,
+                  widget: Switch(
+                      value: isDarkMode,
+                      onChanged: (value) {
+                        setState(() {
+                          isDarkMode = value;
+                          themeProvider.swapTheme();
+                        });
+                      }),
                 ),
                 SizedBox(
                   height: 30,

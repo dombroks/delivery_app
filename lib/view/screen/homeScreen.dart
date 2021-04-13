@@ -1,7 +1,5 @@
-import 'package:delivery/view/darkTheme/themProvider.dart';
 import 'package:delivery/view/screen/sideDrawer.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -19,15 +17,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        child: Center(
-          child: RaisedButton(onPressed: () {
-            ThemeProvider themeProvider =
-                Provider.of<ThemeProvider>(context, listen: false);
-            themeProvider.swapTheme();
-          }),
-        ),
-      ),
+      body: Container(),
     );
   }
 }

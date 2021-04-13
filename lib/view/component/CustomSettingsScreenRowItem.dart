@@ -1,6 +1,5 @@
 import 'package:delivery/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class CustomSettingsScreenRowItem extends StatelessWidget {
   const CustomSettingsScreenRowItem({
@@ -54,13 +53,13 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 3,
+                  height: 5,
                 ),
                 Text(
                   subTitle,
                   style: TextStyle(
                     color: kGrey,
-                    fontSize: 10,
+                    fontSize: 12,
                   ),
                 ),
                 SizedBox(
@@ -70,12 +69,7 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
             ),
           ],
         ),
-        Switch(
-          value: true,
-          onChanged: (val) {},
-          activeColor: kPrimaryColor,
-          hoverColor: Colors.white,
-        )
+        widget,
       ],
     );
   }
