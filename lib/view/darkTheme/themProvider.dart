@@ -14,11 +14,9 @@ class ThemeProvider extends ChangeNotifier {
       iconTheme: IconThemeData(color: Colors.black),
       centerTitle: true,
       textTheme: TextTheme(
-        headline1: TextStyle(
-            fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.black),
+        headline1: TextStyle(fontSize: 36.0, color: Colors.black),
         headline6: TextStyle(fontSize: 36.0, color: Colors.black),
-        bodyText2:
-            TextStyle(fontSize: 14.0, fontFamily: 'Hind', color: Colors.black),
+        bodyText2: TextStyle(fontSize: 36.0, color: Colors.black),
       ),
     ),
     brightness: Brightness.light,
@@ -36,11 +34,9 @@ class ThemeProvider extends ChangeNotifier {
       centerTitle: true,
       brightness: Brightness.dark,
       textTheme: TextTheme(
-        headline1: TextStyle(
-            fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.white),
+        headline1: TextStyle(fontSize: 36.0, color: Colors.white),
         headline6: TextStyle(fontSize: 36.0, color: Colors.white),
-        bodyText2:
-            TextStyle(fontSize: 14.0, fontFamily: 'Hind', color: Colors.white),
+        bodyText2: TextStyle(fontSize: 36.0, color: Colors.white),
       ),
     ),
     brightness: Brightness.dark,

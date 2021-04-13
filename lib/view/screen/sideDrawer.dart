@@ -143,7 +143,7 @@ class _SideDrawerState extends State<SideDrawer> {
                   screenSize: screenSize,
                   icon: Icons.settings,
                   title: "Settings",
-                  destinationScreen: "/personalDataScreen",
+                  destinationScreen: "/settingsScreen",
                 ),
                 SizedBox(
                   height: screenSize.height * 0.15,

@@ -26,7 +26,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.of(context).pushNamed('/homeScreen');
+            Navigator.of(context).pop();
           },
         ),
         title: Text(

@@ -13,7 +13,7 @@ class PersonalDataScreen extends StatelessWidget {
             Icons.arrow_back,
           ),
           onTap: () {
-            print("back arrow click");
+            Navigator.of(context).pop();
           },
         ),
         //backgroundColor: Colors.white,

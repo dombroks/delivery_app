@@ -70,7 +70,7 @@ class _MyAppState extends State<MyApp> {
             },
             initialRoute: '/',
             routes: {
-              '/': (context) => SettingsScreen(),
+              '/': (context) => HomeScreen(),
               '/getStartedScreen': (context) => GetStartedScreen(),
               '/noConnectionScreen': (context) => NoConnectionScreen(),
               '/firstRegisterScreen': (context) => FirstRegisterScreen(),
@@ -82,7 +82,8 @@ class _MyAppState extends State<MyApp> {
               '/personalDataScreen': (context) => PersonalDataScreen(),
               '/confirmPhoneNumberScreen': (context) =>
                   ConfirmPhoneNumberScreen(),
-              '/homeScreen': (context) => HomeScreen()
+              '/homeScreen': (context) => HomeScreen(),
+              '/settingsScreen': (context) => SettingsScreen(),
             },
             debugShowCheckedModeBanner: false,
             title: 'Delivery app',

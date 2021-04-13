@@ -14,7 +14,10 @@ class TermsAndConditionsScreen extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        title: Text("Terms and conditions"),
+        title: Text(
+          "Terms and conditions",
+          style: Theme.of(context).textTheme.headline6,
+        ),
         centerTitle: true,
       ),
       body: SafeArea(
