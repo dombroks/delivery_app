@@ -11,19 +11,17 @@ class PersonalDataScreen extends StatelessWidget {
         leading: GestureDetector(
           child: Icon(
             Icons.arrow_back,
-            color: Colors.black,
           ),
           onTap: () {
             print("back arrow click");
           },
         ),
-        backgroundColor: Colors.white,
+        //backgroundColor: Colors.white,
         elevation: 0,
         title: Center(
           child: Text(
             "Personal Data",
-            style: TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
         ),
         actions: [
@@ -36,7 +34,6 @@ class PersonalDataScreen extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 40),
         width: screenSize.width,
         height: screenSize.height,
-        color: Colors.white,
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

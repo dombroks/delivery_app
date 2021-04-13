@@ -50,7 +50,6 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
                   title,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                     fontSize: 16,
                   ),
                 ),
@@ -73,9 +72,7 @@ class CustomSettingsScreenRowItem extends StatelessWidget {
         ),
         Switch(
           value: true,
-          onChanged: (val){
-
-          },
+          onChanged: (val) {},
           activeColor: kPrimaryColor,
           hoverColor: Colors.white,
         )

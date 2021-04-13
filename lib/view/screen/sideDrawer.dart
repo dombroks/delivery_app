@@ -15,7 +15,6 @@ class _SideDrawerState extends State<SideDrawer> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.all(30.0),
             child: Column(

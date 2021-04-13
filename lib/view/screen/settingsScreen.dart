@@ -15,21 +15,17 @@ class SettingsScreen extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pushNamed('/homeScreen');
           },
-          color: Colors.black,
         ),
         title: Text(
           "Settings",
           style: TextStyle(
-            color: Colors.black,
             fontWeight: FontWeight.bold,
             fontSize: 18,
           ),
         ),
         elevation: 0,
-        backgroundColor: Colors.white,
       ),
       body: Container(
-        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(25.0),
           child: Center(

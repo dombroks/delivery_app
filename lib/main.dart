@@ -33,10 +33,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    getCurrentAppTheme();
   }
-
-  void getCurrentAppTheme() async {}
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +47,7 @@ class _MyAppState extends State<MyApp> {
                 ConnectivityService().connectionStatusController.stream),
       ],
       child: Consumer<ThemeProvider>(
-        builder: (context,themeProvider, child) {
+        builder: (context, themeProvider, child) {
           return MaterialApp(
             localizationsDelegates: [
               GlobalMaterialLocalizations.delegate,
