@@ -1,11 +1,9 @@
-import 'package:delivery/utils/app_localization.dart';
-import 'package:delivery/utils/constants.dart';
+import 'package:delivery/service/multiLanguageService/app_localization.dart';
 import 'package:delivery/view/darkTheme/themProvider.dart';
 import 'package:delivery/view/screen/confirmEmailScreen.dart';
 import 'package:delivery/view/screen/confirmPhoneNumber.dart';
 import 'package:delivery/view/screen/firstRegisterScreen.dart';
 import 'package:delivery/view/screen/homeScreen.dart';
-import 'package:delivery/view/screen/loginScreen.dart';
 import 'package:delivery/view/screen/personalDataScreen.dart';
 import 'package:delivery/view/screen/secondRegisterScreen.dart';
 import 'package:delivery/view/screen/settingsScreen.dart';
@@ -15,7 +13,6 @@ import 'package:delivery/viewmodel/RegisterViewModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-
 import 'package:delivery/service/ConnectivityService.dart';
 import 'package:delivery/view/screen/getStartedScreen.dart';
 import 'package:delivery/view/screen/noConnectionScreen.dart';
@@ -26,6 +23,8 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
+  MyApp();
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -71,7 +70,7 @@ class _MyAppState extends State<MyApp> {
             },
             initialRoute: '/',
             routes: {
-              '/': (context) => SecondRegisterScreen(),
+              '/': (context) => HomeScreen(),
               '/getStartedScreen': (context) => GetStartedScreen(),
               '/noConnectionScreen': (context) => NoConnectionScreen(),
               '/firstRegisterScreen': (context) => FirstRegisterScreen(),

@@ -1,3 +1,4 @@
+import 'package:delivery/service/multiLanguageService/app_localization.dart';
 import 'package:delivery/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -71,7 +72,8 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.account_circle,
-                  title: "Personal Data",
+                  title:
+                      AppLocalizations.of(context).translate("Personal_data"),
                   destinationScreen: "/personalDataScreen",
                 ),
                 SizedBox(
@@ -80,7 +82,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.history,
-                  title: "History",
+                  title: AppLocalizations.of(context).translate("History"),
                   destinationScreen: "/personalDataScreen",
                 ),
                 SizedBox(
@@ -89,7 +91,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.attach_money,
-                  title: "Account",
+                  title: AppLocalizations.of(context).translate("Account"),
                   destinationScreen: "/personalDataScreen",
                 ),
                 SizedBox(
@@ -98,7 +100,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.star,
-                  title: "Reviews",
+                  title: AppLocalizations.of(context).translate("Reviews"),
                   destinationScreen: "/personalDataScreen",
                 ),
                 SizedBox(
@@ -115,7 +117,8 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.insert_drive_file,
-                  title: "Terms & Conditions",
+                  title: AppLocalizations.of(context)
+                      .translate("Terms_and_conditions"),
                   destinationScreen: "/termsAndConditionsScreen",
                 ),
                 SizedBox(
@@ -133,7 +136,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.supervisor_account,
-                  title: "Help Center",
+                  title: AppLocalizations.of(context).translate("Help_center"),
                   destinationScreen: "/personalDataScreen",
                 ),
                 SizedBox(
@@ -142,7 +145,7 @@ class _SideDrawerState extends State<SideDrawer> {
                 CustomSideDrawerRowItem(
                   screenSize: screenSize,
                   icon: Icons.settings,
-                  title: "Settings",
+                  title: AppLocalizations.of(context).translate("Settings"),
                   destinationScreen: "/settingsScreen",
                 ),
                 SizedBox(
@@ -153,7 +156,7 @@ class _SideDrawerState extends State<SideDrawer> {
                     isForLogout: true,
                     screenSize: screenSize,
                     icon: Icons.exit_to_app,
-                    title: "Logout",
+                    title: AppLocalizations.of(context).translate("Logout"),
                     destinationScreen: "/personalDataScreen",
                   ),
                   onTap: () {},

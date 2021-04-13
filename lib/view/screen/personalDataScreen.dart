@@ -1,3 +1,4 @@
+import 'package:delivery/service/multiLanguageService/app_localization.dart';
 import 'package:delivery/utils/constants.dart';
 import 'package:delivery/view/component/CustomTextField.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,7 @@ class PersonalDataScreen extends StatelessWidget {
         elevation: 0,
         title: Center(
           child: Text(
-            "Personal Data",
+            AppLocalizations.of(context).translate("Personal_data"),
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
         ),

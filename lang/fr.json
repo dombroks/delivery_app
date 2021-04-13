@@ -4,7 +4,20 @@
     "login" : "Connecter",
     "register" : "Registrer",
     "already_have_an_account_?" : "Vous avez déjà un compte?",
-    "don't_have_an_account_?" : "Don't have an account?"
+    "don't_have_an_account_?" : "Vous n'avez pas de compte?",
+    "forgot_password?" : "Mot de passe oublié?",
+    "Register_now" : "S'inscrire maintenant",
+    "Email": "Email",
+    "Password" : "Mot de passe",
+    "Personal_data" : "Données personnelles",
+    "History" : "Historique",
+    "Account" : "Compte",
+    "Reviews" : "Commentaires",
+    "Terms_and_conditions" : "Termes et conditions",
+    "FAQs" : "FAQs",
+    "Help_center" : "Centre d'aide",
+    "Settings" : "Paramètres",
+    "Logout": "Se déconnecter"
 
 
 

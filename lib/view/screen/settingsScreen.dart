@@ -62,18 +62,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 SizedBox(
                   height: 30,
                 ),
-                CustomSettingsScreenRowItem(
-                  title: "Language",
-                  subTitle: "Select language",
-                  icon: Icons.language,
-                  widget: Row(
-                    children: [
-                      Text("EN"),
-                      SizedBox(width: 5),
-                      Icon(Icons.arrow_right)
-                    ],
-                  ),
-                ),
                 SizedBox(
                   height: 30,
                 ),

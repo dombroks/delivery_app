@@ -1,3 +1,4 @@
+import 'package:delivery/service/multiLanguageService/app_localization.dart';
 import 'package:delivery/utils/constants.dart';
 import 'package:delivery/view/component/CustomButton.dart';
 import 'package:delivery/viewmodel/AuthViewModel.dart';
@@ -61,7 +62,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     CustomTextFiled(
                       screenSize: screenSize,
-                      hintText: "Password",
+                      hintText:
+                          AppLocalizations.of(context).translate("Password"),
                       isForPasword: true,
                       controller: passwordController,
                     ),
@@ -75,7 +77,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           GestureDetector(
                             child: Text(
-                              "Forgot password?",
+                              AppLocalizations.of(context)
+                                  .translate("forgot_password?")
+                                  .toString(),
                               style: TextStyle(
                                 color: kGrey.withOpacity(0.9),
                                 fontWeight: FontWeight.bold,
@@ -92,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 15,
                     ),
                     CustomButton(
-                      text: "Login",
+                      text: AppLocalizations.of(context).translate("login"),
                       role: () async {
                         await authViewModel
                             .login(emailController.text.trim(),
@@ -115,7 +119,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Don't have an account?",
+                          AppLocalizations.of(context)
+                              .translate("don't_have_an_account_?"),
                           style: TextStyle(
                             color: kGrey.withOpacity(0.9),
                             fontWeight: FontWeight.bold,
@@ -123,7 +128,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         GestureDetector(
                           child: Text(
-                            " Register now",
+                            " " +
+                                AppLocalizations.of(context)
+                                    .translate("Register_now"),
                             style: TextStyle(
                               color: kPrimaryColor,
                               fontWeight: FontWeight.bold,

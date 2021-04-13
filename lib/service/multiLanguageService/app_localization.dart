@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
 
 class AppLocalizations {
   final Locale locale;
@@ -15,7 +16,7 @@ class AppLocalizations {
 
   static const LocalizationsDelegate<AppLocalizations> delegate =
       _AppLocalizationsDelegate();
-      
+
   Map<String, String> _localizedStrings;
 
   Future<bool> load() async {

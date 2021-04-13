@@ -4,7 +4,20 @@
     "login" : "Login",
     "register" : "Register",
     "already_have_an_account_?" : "Already have an account?",
-    "don't_have_an_account_?" : "Don't have an account?"
+    "don't_have_an_account_?" : "Don't have an account?",
+    "forgot_password?" : "Forgot password?",
+    "Register_now" : "Register now",
+    "Email": "Email",
+    "Password" : "Password",
+    "Personal_data" : "Personal Data",
+    "History" : "History",
+    "Account" : "Account",
+    "Reviews" : "Reviews",
+    "Terms_and_conditions" : "Terms and conditions",
+    "FAQs" : "FAQs",
+    "Help_center" : "Help Center",
+    "Settings" : "Settings",
+    "Logout": "Logout"
 
 
 }
