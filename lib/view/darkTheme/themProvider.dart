@@ -25,6 +25,7 @@ class ThemeProvider extends ChangeNotifier {
     canvasColor: Colors.white,
     buttonColor: kPrimaryColor,
   );
+
   ThemeData dark = ThemeData.dark().copyWith(
     iconTheme: IconThemeData(color: Colors.black),
     buttonTheme: ButtonThemeData(buttonColor: Colors.white),
