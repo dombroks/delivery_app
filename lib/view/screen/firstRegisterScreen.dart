@@ -14,7 +14,11 @@ class FirstRegisterScreen extends StatelessWidget {
         elevation: 2,
         backgroundColor: kPrimaryColor,
         centerTitle: true,
-        title: Text("Upload Personal Info"),
+        title: Text(
+          "Upload Personal Info",
+          style: TextStyle(
+              color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Container(
         width: screenSize.width,

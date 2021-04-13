@@ -7,7 +7,7 @@ class TermsAndConditionsScreen extends StatelessWidget {
     var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        elevation: 0,
         leading: GestureDetector(
           child: Icon(Icons.arrow_back),
           onTap: () {

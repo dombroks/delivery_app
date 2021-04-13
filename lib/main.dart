@@ -5,6 +5,7 @@ import 'package:delivery/view/screen/confirmEmailScreen.dart';
 import 'package:delivery/view/screen/confirmPhoneNumber.dart';
 import 'package:delivery/view/screen/firstRegisterScreen.dart';
 import 'package:delivery/view/screen/homeScreen.dart';
+import 'package:delivery/view/screen/loginScreen.dart';
 import 'package:delivery/view/screen/personalDataScreen.dart';
 import 'package:delivery/view/screen/secondRegisterScreen.dart';
 import 'package:delivery/view/screen/settingsScreen.dart';
@@ -70,7 +71,7 @@ class _MyAppState extends State<MyApp> {
             },
             initialRoute: '/',
             routes: {
-              '/': (context) => HomeScreen(),
+              '/': (context) => SecondRegisterScreen(),
               '/getStartedScreen': (context) => GetStartedScreen(),
               '/noConnectionScreen': (context) => NoConnectionScreen(),
               '/firstRegisterScreen': (context) => FirstRegisterScreen(),

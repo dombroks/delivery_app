@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:delivery/utils/constants.dart';
@@ -30,7 +29,11 @@ class SecondRegisterScreen extends StatelessWidget {
         elevation: 2,
         backgroundColor: kPrimaryColor,
         centerTitle: true,
-        title: Text("Upload Profile Picture"),
+        title: Text(
+          "Upload Profile Picture",
+          style: TextStyle(
+              color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Container(
         width: screenSize.width,
@@ -75,7 +78,8 @@ class SecondRegisterScreen extends StatelessWidget {
                         height: 40,
                         child: CustomOutlinedButton(
                           role: () {
-                            Navigator.of(context).pushNamed('/firstRegistrationScreen');
+                            Navigator.of(context)
+                                .pushNamed('/firstRegistrationScreen');
                           },
                           text: "Back",
                         ),

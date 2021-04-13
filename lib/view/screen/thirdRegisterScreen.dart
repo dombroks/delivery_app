@@ -25,7 +25,11 @@ class _ThirdRegisterScreenState extends State<ThirdRegisterScreen> {
         elevation: 2,
         backgroundColor: kPrimaryColor,
         centerTitle: true,
-        title: Text("Upload ID Card"),
+        title: Text(
+          "Upload ID Card",
+          style: TextStyle(
+              color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+        ),
       ),
       body: Container(
         width: screenSize.width,
