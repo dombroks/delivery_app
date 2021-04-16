@@ -10,14 +10,15 @@ class HomeScreen extends StatelessWidget {
       drawer: SideDrawer(),
       appBar: AppBar(
         actions: [
-          Container(
-            width: 25,
-            height: 25,
-            child:
-                CircleAvatar(child: Image.asset("assets/images/someone.png")),
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
+          GestureDetector(
+            child: Container(
+              width: 30.0,
+              height: 30.0,
+              child: Image.asset("assets/images/someone.png"),
             ),
+            onTap: () {
+              Navigator.of(context).pushNamed("/personalDataScreen");
+            },
           ),
           SizedBox(width: 20)
         ],
