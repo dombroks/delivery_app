@@ -74,5 +74,9 @@ class Repository {
 
   Future logout() {}
 
-  Future<void> confirmSentCode(String code){}
+  Future<void> confirmSentCode(String code) {}
+
+  Future<void> getCommands() {}
+
+  Future<void> acceptCommand() {}
 }

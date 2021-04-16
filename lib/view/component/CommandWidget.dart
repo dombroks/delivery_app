@@ -35,7 +35,7 @@ class CommandWidget extends StatelessWidget {
         hasIcon: false,
         header: Container(
           decoration: BoxDecoration(
-            color: Colors.grey[300],
+            color: Colors.grey[200],
             borderRadius: BorderRadius.all(
               Radius.circular(10),
             ),
