@@ -28,6 +28,7 @@ class CommandWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
+          width: 2,
           color: kPrimaryColor,
         ),
       ),
