@@ -1,4 +1,4 @@
-import 'package:delivery/data/Repository.dart';
+import 'package:delivery/data/repository/Repository.dart';
 import 'package:flutter/material.dart';
 
 class AuthViewModel extends ChangeNotifier {
@@ -7,10 +7,10 @@ class AuthViewModel extends ChangeNotifier {
       _repository.login(username, password);
 
   Future<String> register(username, password, phone, email) =>
-      _repository.register(username, password, phone, email);
+      _repository.register();
 
   Future changePassowrd(username, password, phone, email) =>
-      _repository.changePassowrd(username, password, phone, email);
+      _repository.changePassowrd();
 
   Future resendActivationCode() => _repository.resendActivationCode();
   Future confirmSentCode(code) => _repository.confirmSentCode(code);

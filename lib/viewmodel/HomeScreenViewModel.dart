@@ -1,6 +1,6 @@
 import 'dart:ffi';
 
-import 'package:delivery/data/Repository.dart';
+import 'package:delivery/data/repository/Repository.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeScreenViewModel extends ChangeNotifier {
