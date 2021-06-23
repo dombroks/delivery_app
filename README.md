@@ -2,7 +2,7 @@
 
 A Flutter made delivery app, just the front end, no backend.
 
-## Detail
+## Properties
 
 - MVVM architecture.
 - Provider as state managment.
