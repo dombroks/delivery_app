@@ -16,3 +16,5 @@ A Flutter made delivery app, just the front end, no backend.
 ![](screenshots/04.png) ![](screenshots/05.png) ![](screenshots/06.png)
 ![](screenshots/07.png) ![](screenshots/08.png) ![](screenshots/09.png)
 ![](screenshots/010.png)
+
+### Fork the repository and enjoy!
