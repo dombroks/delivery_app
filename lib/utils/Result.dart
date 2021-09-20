@@ -4,8 +4,8 @@ class Result<T> {
   String message;
   
 Result.loading(this.message) : status = Status.LOADING;
-Result.completed(this.data) : status = Status.COMPLETED;
 Result.error(this.message) : status = Status.ERROR;
+Result.completed(this.data) : status = Status.COMPLETED;
   
 @override
   String toString() {
