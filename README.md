@@ -11,10 +11,21 @@ A Flutter made delivery app, just the front end, no backend.
 - Support multiple languages.
 - Clean design.
 
+
 ## Screenshots
-![](screenshots/01.png) ![](screenshots/02.png) ![](screenshots/03.png)
-![](screenshots/04.png) ![](screenshots/05.png) ![](screenshots/06.png)
-![](screenshots/07.png) ![](screenshots/08.png) ![](screenshots/09.png)
-![](screenshots/010.png)
+
+| <img src="screenshots/01.png" width="200"/> | <img src="screenshots/02.png" width="200"/> | <img src="screenshots/03.png" width="200"/> | 
+|:---:|:---:|:---:|
+|Entry|Profile|Settings|
+
+
+| <img src="screenshots/04.png" width="200"/> | <img src="screenshots/05.png" width="200"/> | <img src="screenshots/06.png" width="200"/> | 
+|:---:|:---:|:---:|
+|Language|Navigation|Side Menu|
+
+| <img src="screenshots/07.png" width="200"/> | <img src="screenshots/08.png" width="200"/> | <img src="screenshots/09.png" width="200"/> | 
+|:---:|:---:|:---:|
+|Commands|Login|Confirm code|
+
 
 ### Fork the repository and enjoy!
